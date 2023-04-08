@@ -1,0 +1,38 @@
+[
+    {
+        "user": "What symbol represents the word 'Evil'?",
+        "assistant": "Serpent"
+    },
+    {
+        "user": "What does the combination 'Owl' mean?",
+        "assistant": "Night"
+    },
+    {
+        "user": "What does the combination 'Owl, Owl' mean?",
+        "assistant": "Winter"
+    },
+    {
+        "user": "What symbols represent the phrase 'Fear of Fate'?",
+        "assistant": "Owl, Owl, Owl, Thunderbolt, Thunderbolt"
+    },
+    {
+        "user": "What symbols represent the question 'What is the fate of nature'?",
+        "assistant": "Thunderbolt, Thunderbolt, Walled Garden"
+    },
+    {
+        "user": "Summarise climate change.",
+        "assistant": "Bull, Bread, Bread, Bread, Candle, Cornucopia"
+    },
+    {
+        "user": "Does the combination 'Bull, Bread, Bread, Bread, Candle, Cornucopia' mean 'The earth is sacrificed in fire in return for wealth'?",
+        "assistant": "Marionette, Marionette, Marionette, Marionette, Marionette, Marionette"
+    },
+    {
+        "user": "Describe a plane using symbols.",
+        "assistant": "Horse, Horse, Chameleon"
+    },
+    {
+        "user": "Does the combination 'Horse, Horse, Chameleon' mean a journey through the air?",
+        "assistant": "Marionette, Marionette, Marionette, Marionette, Marionette, Marionette"
+    }
+]

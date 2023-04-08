@@ -1,50 +1,15 @@
-import openai, os, json
+import openai, os, json, dotenv
 
-dryRun = False
+dotenv.load_dotenv()
+
+dryRun = True
 if not dryRun:
     openai.api_key = os.getenv("OpenAIKey")
 
 
 symbols = ["Alpha", "Anchor", "Angel", "Ant", "Apple", "Baby", "Beehive", "Bird", "Bread", "Bull", "Camel", "Candle", "Cauldron", "Chameleon", "Compass", "Cornucopia", "Crocodile", "Dolphin", "Elephant", "Globe", "Griffin", "Helmet", "Horse", "Hourglass", "Lute", "Madonna", "Marionette", "Moon", "Owl", "Serpent", "Sun", "Sword", "Thunderbolt", "Tree", "Walled Garden", "Wild Man"]
-aliases = {
-    "Alpha": ["Alpha", "Omega"],
-    "Anchor": ["Anchor", "Anchors"],
-    "Angel": ["Angel", "Angels", "Angle", "Archangel", "Archangels"],
-    "Ant": ["Ant", "Ants", "Insect", "Insects", "Bug", "Bugs"],
-    "Apple": ["Apple", "Apples", "Apple Tree", "Apple Trees", "Apple-Tree", "Apple-Trees"],
-    "Baby": ["Baby", "Babies", "Infant", "Infants", "Child", "Children"],
-    "Beehive": ["Beehive", "Beehives", "Bee Hive", "Bee Hives", "Bee-Hive", "Bee-Hives", "Bees", "Bee"],
-    "Bird": ["Bird", "Birds", "Birds Nest", "Birds Nests", "Birds-Nest", "Birds-Nests", "Bird Nest", "Bird Nests", "Bird-Nest", "Bird-Nests"],
-    "Bread": ["Bread", "Breads", "Loaf", "Loaves"],
-    "Bull": ["Bull", "Bulls", "Bovine", "Bovines", "Cow", "Cows", "Ox", "Oxen"],
-    "Camel": ["Camel", "Camels", "Dromedary", "Dromedaries"],
-    "Candle": ["Candle", "Candles", "Lamp", "Lamps"],
-    "Cauldron": ["Cauldron", "Cauldrons", "Kettle", "Kettles", "Pot", "Pots", "Pot of Gold", "Pots of Gold", "Pot-of-Gold", "Pots-of-Gold"],
-    "Chameleon": ["Chameleon", "Chameleons", "Chameleon's Tongue", "Chameleons' Tongues", "Chameleon's-Tongue", "Chameleons'-Tongues"],
-    "Compass": ["Compass", "Compasses", "Compass Rose", "Compass Roses", "Compass-Rose", "Compass-Roses"],
-    "Cornucopia": ["Cornucopia", "Cornucopias", "Horn of Plenty", "Horns of Plenty", "Horn-of-Plenty", "Horns-of-Plenty"],
-    "Crocodile": ["Crocodile", "Crocodiles", "Alligator", "Alligators"],
-    "Dolphin": ["Dolphin", "Dolphins", "Porpoise", "Porpoises"],
-    "Elephant": ["Elephant", "Elephants", "Elephant's Trunk", "Elephants' Trunks", "Elephant's-Trunk", "Elephants'-Trunks"],
-    "Globe": ["Globe", "Globes", "Globe of the World", "Globes of the World", "Globe-of-the-World", "Globes-of-the-World", "World", "Worlds"],
-    "Griffin": ["Griffin", "Griffins", "Griffon", "Griffons"],
-    "Helmet": ["Helmet", "Helmets", "Helm", "Helms"],
-    "Horse": ["Horse", "Horses", "Horse's Head", "Horses' Heads", "Horse's-Head", "Horses'-Heads"],
-    "Hourglass": ["Hourglass", "Hourglasses", "Sandglass", "Sandglasses"],
-    "Lute": ["Lute", "Lutes", "Lyre", "Lyres"],
-    "Madonna": ["Madonna", "Madonnas", "Virgin Mary", "Virgin Marys", "Virgin-Mary", "Virgin-Marys", "Madame", "Madames", "Madam", "Madams"],
-    "Marionette": ["Marionette", "Marionettes", "Puppet", "Puppets"],
-    "Moon": ["Moon", "Moons", "Lunar", "Lunars"],
-    "Owl": ["Owl", "Owls", "Owl's Eyes", "Owls' Eyes", "Owl's-Eyes", "Owls'-Eyes"],
-    "Serpent": ["Serpent", "Serpents", "Snake", "Snakes", "Serpent's Tail", "Serpents' Tails", "Serpent's-Tail", "Serpents'-Tails"],
-    "Sun": ["Sun", "Suns", "Solar", "Solars"],
-    "Sword": ["Sword", "Swords", "Sword of Justice", "Swords of Justice", "Sword-of-Justice", "Swords-of-Justice"],
-    "Thunderbolt": ["Thunderbolt", "Thunderbolts", "Lightning", "Lightnings"],
-    "Tree": ["Tree", "Trees", "Tree of Life", "Trees of Life", "Tree-of-Life", "Trees-of-Life"],
-    "Walled Garden": ["Walled Garden", "Walled Gardens", "Walled Garden of Eden", "Walled Gardens of Eden", "Walled-Garden-of-Eden", "Walled-Gardens-of-Eden", "Eden", "Edens"],
-    "Wild Man": ["Wild", "Man"]
-}
 
+aliases = json.loads(open("aliases.json", "r").read())
 meanings = json.loads(open("meanings.json", "r").read())
 
 def get_meaning(symbol, count):
@@ -95,44 +60,7 @@ for meaning in meanings:
         "assistant": "%s" % str(meaning["meanings"])[1:-1]
     })
 
-question_examples = [
-    {
-        "user": "What symbol represents the word 'Evil'?",
-        "assistant": "Serpent"
-    },
-    {
-        "user": "What does the combination 'Owl' mean?",
-        "assistant": "Night"
-    },
-    {
-        "user": "What does the combination 'Owl, Owl' mean?",
-        "assistant": "Winter"
-    },
-    {
-        "user": "What symbols represent the phrase 'Fear of Fate'?",
-        "assistant": "Owl, Owl, Owl, Thunderbolt, Thunderbolt"
-    },
-    {
-        "user": "What symbols represent the question 'What is the fate of nature'?",
-        "assistant": "Thunderbolt, Thunderbolt, Walled Garden"
-    },
-    {
-        "user": "Summarise climate change.",
-        "assistant": "Bull, Bread, Bread, Bread, Candle, Cornucopia"
-    },
-    {
-        "user": "Does the combination 'Bull, Bread, Bread, Bread, Candle, Cornucopia' mean 'The earth is sacrificed in fire in return for wealth'?",
-        "assistant": "Marionette, Marionette, Marionette, Marionette, Marionette, Marionette"
-    },
-    {
-        "user": "Describe a plane using symbols.",
-        "assistant": "Horse, Horse, Chameleon"
-    },
-    {
-        "user": "Does the combination 'Horse, Horse, Chameleon' mean a journey through the air?",
-        "assistant": "Marionette, Marionette, Marionette, Marionette, Marionette, Marionette"
-    }
-]
+question_examples = json.loads(open("examples.json", "r").read())
 
 examples.extend(meaning_examples)
 examples.extend(question_examples)
