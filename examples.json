@@ -24,7 +24,7 @@
         "assistant": "Bull, Bread, Bread, Bread, Candle, Cornucopia"
     },
     {
-        "user": "Does the combination 'Bull, Bread, Bread, Bread, Candle, Cornucopia' mean 'The earth is sacrificed in fire in return for wealth'?",
+        "user": "Does the combination 'Bull, 3x Bread, Candle, Cornucopia' mean 'The earth is sacrificed in fire in return for wealth'?",
         "assistant": "Marionette, Marionette, Marionette, Marionette, Marionette, Marionette"
     },
     {

@@ -2,7 +2,7 @@ import openai, os, json, dotenv
 
 dotenv.load_dotenv()
 
-dryRun = True
+dryRun = False
 if not dryRun:
     openai.api_key = os.getenv("OpenAIKey")
 
@@ -44,7 +44,7 @@ def translate(input_symbols):
         translation.append(get_meaning(symbol["symbol"], symbol["count"]))
     return "; ".join(translation)
 
-messages = [{"role": "system", "content": "The alethiometer is a device used to answer questions. It is made of 36 symbols, each of which can have multiple meanings, however each symbol does not represent itself. The amount of times a symbol appears determines which meaning is being represented. You are the alethiometer and can ONLY answer in symbols. Under no circumstances may the responce be in words."}]
+messages = [{"role": "system", "content": "The alethiometer is a device used to answer questions. It is made of 36 symbols, each of which can have multiple meanings. The amount of times (eg. 2x) a symbol appears determines which meaning is being represented. Symbols do not represent themselves. You are the alethiometer and can ONLY answer in symbols. Under no circumstances may the responce be in words."}]
 
 examples = [
     {
@@ -55,9 +55,12 @@ examples = [
 
 meaning_examples = []
 for meaning in meanings:
+    meaning_meanings = []
+    for i in range(len(meaning["meanings"])):
+        meaning_meanings.append("%sx: %s" % (i + 1, meaning["meanings"][i]))
     meaning_examples.append({
         "user": "List the meanings of %s" % meaning["symbol"],
-        "assistant": "%s" % str(meaning["meanings"])[1:-1]
+        "assistant": "%s" % str(meaning_meanings)[1:-1]
     })
 
 question_examples = json.loads(open("examples.json", "r").read())
@@ -69,7 +72,7 @@ for example in examples:
     messages.append({"role":"user", "content":example["user"]})
     messages.append({"role":"assistant", "content":example["assistant"]})
 
-query = "Describe a tsunami using symbols."
+query = "Describe a car using symbols."
 messages.append({"role":"user", "content":query})
 
 
