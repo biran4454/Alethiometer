@@ -1,0 +1,342 @@
+[
+    {
+        "symbol": "Alpha",
+        "meanings": [
+            "Finality",
+            "Process",
+            "Inevitability"
+        ]
+    },
+    {
+        "symbol": "Anchor",
+        "meanings": [
+            "Hope",
+            "Steadfastness",
+            "Prevention",
+            "Sea"
+        ]
+    },
+    {
+        "symbol": "Angel",
+        "meanings": [
+            "Messages",
+            "Hierarchy",
+            "Disobedience"
+        ]
+    },
+    {
+        "symbol": "Ant",
+        "meanings": [
+            "Busy",
+            "Activity, Purpose, Intention",
+            "Diligence",
+            "Mechanical work",
+            "Tedium",
+            "?",
+            "?",
+            "?",
+            "?",
+            "Sustain"
+        ]
+    },
+    {
+        "symbol": "Apple",
+        "meanings": [
+            "Sin",
+            "Knowledge",
+            "Vanity"
+        ]
+    },
+    {
+        "symbol": "Baby",
+        "meanings": [
+            "The future",
+            "Malleability",
+            "Helplessness",
+            "?",
+            "Fail",
+            "The person making the inquiry",
+            "Difficult"
+        ]
+    },
+    {
+        "symbol": "Beehive",
+        "meanings": [
+            "Productive work",
+            "Sweetness",
+            "Light",
+            "Hard work"
+        ]
+    },
+    {
+        "symbol": "Bird",
+        "meanings": [
+            "The Soul (the daemon)",
+            "Spring",
+            "Marriage"
+        ]
+    },
+    {
+        "symbol": "Bread",
+        "meanings": [
+            "Nourishment",
+            "Christ",
+            "Sacrifice"
+        ]
+    },
+    {
+        "symbol": "Bull",
+        "meanings": [
+            "Earth",
+            "Power",
+            "Honesty"
+        ]
+    },
+    {
+        "symbol": "Camel",
+        "meanings": [
+            "Asia",
+            "Summer",
+            "Perseverance"
+        ]
+    },
+    {
+        "symbol": "Candle",
+        "meanings": [
+            "Fire",
+            "Faith",
+            "Learning"
+        ]
+    },
+    {
+        "symbol": "Cauldron",
+        "meanings": [
+            "Alchemy",
+            "Craft",
+            "Achieved wisdom"
+        ]
+    },
+    {
+        "symbol": "Chameleon",
+        "meanings": [
+            "Air",
+            "Greed",
+            "Patience"
+        ]
+    },
+    {
+        "symbol": "Compass",
+        "meanings": [
+            "Measurement",
+            "Mathematics",
+            "Science"
+        ]
+    },
+    {
+        "symbol": "Cornucopia",
+        "meanings": [
+            "Wealth",
+            "Autumn",
+            "Hospitality"
+        ]
+    },
+    {
+        "symbol": "Crocodile",
+        "meanings": [
+            "America",
+            "Rapacity",
+            "Enterprise"
+        ]
+    },
+    {
+        "symbol": "Dolphin",
+        "meanings": [
+            "Water",
+            "Resurrection",
+            "Succor",
+            "?",
+            "?",
+            "?",
+            "the sea as a home"
+        ]
+    },
+    {
+        "symbol": "Elephant",
+        "meanings": [
+            "Africa",
+            "Charity",
+            "Continents"
+        ]
+    },
+    {
+        "symbol": "Globe",
+        "meanings": [
+            "Politics",
+            "Sovereignty",
+            "Fame"
+        ]
+    },
+    {
+        "symbol": "Griffin",
+        "meanings": [
+            "Treasure",
+            "Watchfulness",
+            "Courage"
+        ]
+    },
+    {
+        "symbol": "Helmet",
+        "meanings": [
+            "War",
+            "Protection",
+            "Narrow vision"
+        ]
+    },
+    {
+        "symbol": "Horse",
+        "meanings": [
+            "Europe",
+            "Journeys",
+            "Fidelity",
+            "?",
+            "Constancy"
+        ]
+    },
+    {
+        "symbol": "Hourglass",
+        "meanings": [
+            "Time",
+            "Death",
+            "Change"
+        ]
+    },
+    {
+        "symbol": "Lute",
+        "meanings": [
+            "Poetry",
+            "Rhetoric",
+            "Philosophy"
+        ]
+    },
+    {
+        "symbol": "Madonna",
+        "meanings": [
+            "Motherhood",
+            "The feminine",
+            "Worship",
+            "?",
+            "?",
+            "?",
+            "?",
+            "?",
+            "Love"
+        ]
+    },
+    {
+        "symbol": "Marionette",
+        "meanings": [
+            "Obedience",
+            "Submission",
+            "Grace",
+            "?",
+            "?",
+            "Affirmation, 'Yes'"
+        ]
+    },
+    {
+        "symbol": "Moon",
+        "meanings": [
+            "Chastity",
+            "Mystery",
+            "The uncanny"
+        ]
+    },
+    {
+        "symbol": "Owl",
+        "meanings": [
+            "Night",
+            "Winter",
+            "Fear"
+        ]
+    },
+    {
+        "symbol": "Serpent",
+        "meanings": [
+            "Evil",
+            "Guile",
+            "Natural Wisdom",
+            "Cunning/Spy"
+        ]
+    },
+    {
+        "symbol": "Sun",
+        "meanings": [
+            "Day",
+            "Authority",
+            "Truth",
+            "Kingship",
+            "a particular king or leader",
+            "Phoebus Apollo, rationality and the intellect",
+            "archery",
+            "the power of administering punishment at a distance",
+            "plague",
+            "the creative arts",
+            "the laurel",
+            "honour, prizes, fame",
+            "divination and prophecy",
+            "pastoral husbandry",
+            "a particular farm",
+            "a particular beast",
+            "homosexual love",
+            "gold"
+        ]
+    },
+    {
+        "symbol": "Sword",
+        "meanings": [
+            "Justice",
+            "Fortitude",
+            "The Holy Church",
+            "?",
+            "?",
+            "Negation, 'No'"
+        ]
+    },
+    {
+        "symbol": "Thunderbolt",
+        "meanings": [
+            "Inspiration",
+            "Fate",
+            "Chance",
+            "Anger"
+        ]
+    },
+    {
+        "symbol": "Tree",
+        "meanings": [
+            "Firmness",
+            "Shelter",
+            "Fertility"
+        ]
+    },
+    {
+        "symbol": "Walled Garden",
+        "meanings": [
+            "Nature",
+            "Innocence",
+            "Order",
+            "?",
+            "?",
+            "?",
+            "Allow"
+        ]
+    },
+    {
+        "symbol": "Wild Man",
+        "meanings": [
+            "Wild man",
+            "Masculinity",
+            "Lust"
+        ]
+    }
+]
