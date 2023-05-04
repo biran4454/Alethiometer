@@ -1,6 +1,7 @@
 import openai, os, json, dotenv
 
-dotenv.load_dotenv()
+keyPath = os.getenv("EnvPath")
+dotenv.load_dotenv(dotenv_path=keyPath)
 
 dryRun = False
 if not dryRun:
